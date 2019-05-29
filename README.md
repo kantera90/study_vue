@@ -1,9 +1,12 @@
-# stady_computed
+# stady_vue
 
-> My kickass Nuxt.js project
+> Nuxt.js project
 
 ## Setting
-node v10.15.1
+yarn v1.16.0
+
+## storybook
+$ yarn storybook 
 
 ## Build Setup
 
