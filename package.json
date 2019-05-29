@@ -1,0 +1,24 @@
+{
+  "name": "stady_computed",
+  "version": "1.0.0",
+  "description": "My kickass Nuxt.js project",
+  "author": "h_oyagi",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "storybook": "start-storybook -p 9001"
+  },
+  "dependencies": {
+    "@storybook/vue": "^5.0.11",
+    "babel-preset-vue": "^2.0.2",
+    "cross-env": "^5.2.0",
+    "lodash": "^4.17.11",
+    "nuxt": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
