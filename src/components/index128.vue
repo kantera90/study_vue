@@ -2,18 +2,12 @@
   <section class="container">
     <div>
       <h1 class="title">ウォッチャを学ぶ</h1>
-      <h2 class="subtitle">ウォッチャの使い方</h2>
+      <h2 class="subtitle">ウォッチャでデータを監視して処理を自動化する</h2>
       <div class="study">
-        <h3 class="study_title">ソート機能を追加しよう</h3>
-        <input v-model.number="budget">円以下に絞り込む
-        <input v-model.number="limit">件を表示
-        <button type="button" @click="order=!order">切り替え</button>
-        <p>{{ matched.length }}件中{{ filteredList.length }}件を表示中</p>
-        <ul>
-          <li v-for="item in filteredList" v-bind:key="item.id">
-            {{ item.name }} {{ item.price }}円
-          </li>
-        </ul>
+        <h3 class="study_title">ウォッチャの使い方</h3>
+
+
+
       </div>
       <div class="data">{{$data}}</div>
     </div>
