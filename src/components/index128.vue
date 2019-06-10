@@ -92,7 +92,7 @@ export default {
   watch: {
     list: {
       handler: function(newNal, oldVal) {
-        action('listが変化');
+        alert('値がへんか！')
       },
       deep: true,
       immediate: true
