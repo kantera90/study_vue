@@ -63,8 +63,8 @@
 
 .study_title-sub{
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
   font-size: 0.8em;
 }
 .links {
@@ -78,6 +78,9 @@
   padding: 20px;
 }
 
+.study p{
+  margin: 0;
+}
 .data{
   margin-top: 20px;
   padding: 20px;
