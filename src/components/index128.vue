@@ -6,6 +6,10 @@
       <div class="study">
         <h3 class="study_title">ウォッチャの使い方</h3>
         <div><input v-model.number="list[0].price"> {{list[0].price}}</div>
+        <h4 class="study_title-sub">インスタンスメソッドでの登録</h4>
+        <div><input v-model.number="list[1].price"> {{list[1].price}}</div>
+        <h4 class="study_title-sub">ウォッチャの解除</h4>
+        <p>test_unwatch変数にインスタンスメソッドを格納して、実行することで値が返る。これによりウォッチャを解除できる</p>
       </div>
       <div class="data">{{$data}}</div>
     </div>
@@ -53,6 +57,16 @@
   margin-bottom: 10px;
 }
 
+.study_title:not(:first-child){
+  margin-top: 20px;
+}
+
+.study_title-sub{
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
 .links {
   padding-top: 15px;
 }
@@ -80,6 +94,7 @@ import _ from 'lodash';
 export default {
   data() {
     return{
+      edited: false,
       list: [
         { id: 1, name: 'りんご', price: 100 },
         { id: 2, name: 'ばなな', price: 200 },
@@ -91,12 +106,21 @@ export default {
   },
   watch: {
     list: {
-      handler: function(newNal, oldVal) {
+      handler: function() {
         alert('値がへんか！')
       },
       deep: true,
       immediate: true
     }
+  },
+  created: function(){
+    var test_unwatch = this.$watch('list', function(){
+      alert('インスタントメソッドを使ったハンドラ！');
+    },
+    {
+      deep: true
+    })
+    test_unwatch();//listの監視を解除
   }
 }
 </script>
