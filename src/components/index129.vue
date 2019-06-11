@@ -4,12 +4,8 @@
       <h1 class="title">ウォッチャを学ぶ</h1>
       <h2 class="subtitle">ウォッチャでデータを監視して処理を自動化する</h2>
       <div class="study">
-        <h3 class="study_title">ウォッチャの使い方</h3>
+        <h3 class="study_title">一度だけ動作するウォッチャ</h3>
         <div><input v-model.number="list[0].price"> {{list[0].price}}</div>
-        <h4 class="study_title-sub">インスタンスメソッドでの登録</h4>
-        <div><input v-model.number="list[1].price"> {{list[1].price}}</div>
-        <h4 class="study_title-sub">ウォッチャの解除</h4>
-        <p>test_unwatch変数にインスタンスメソッドを格納して、実行することで値が返る。これによりウォッチャを解除できる</p>
       </div>
       <div class="data">{{$data}}</div>
     </div>
@@ -97,6 +93,7 @@ import _ from 'lodash';
 export default {
   data() {
     return{
+      edited: false,
       list: [
         { id: 1, name: 'りんご', price: 100 },
         { id: 2, name: 'ばなな', price: 200 },
@@ -118,11 +115,12 @@ export default {
   created: function(){
     var test_unwatch = this.$watch('list', function(){
       alert('インスタントメソッドを使ったハンドラ！');
+      this.edited = true;
+      test_unwatch();//listの監視を解除
     },
     {
       deep: true
     })
-    test_unwatch();//listの監視を解除
   }
 }
 </script>
