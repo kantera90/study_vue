@@ -106,10 +106,13 @@ export default {
   },
   watch: {
     list: {
-      handler: _.debounce(function(newVal){
+      handler: _.debounce(function(newVal){//debaunceはLodashのメソッド：実行から指定ミリ秒が過ぎた場合にコールバックを呼び出す
+        //コストの高い処理を書く
         console.log(newVal);
       },
-        600
+        //valueの変化が終わるのを待つ時間をミリ秒で指定
+
+        1000
       ),
       deep: true,
       immediate: true
