@@ -7,6 +7,7 @@ import Page124 from '../components/index124.vue'
 import Page126 from '../components/index126.vue'
 import Page128 from '../components/index128.vue'
 import Page129 from '../components/index129.vue'
+import Page130 from '../components/index130.vue'
 
 storiesOf('page', module)
 .add('120', () => ({
@@ -47,5 +48,10 @@ storiesOf('page', module)
 .add('129', () => ({
     components: { Page129 },
     template: `<Page129 />`
+  })
+)
+.add('130', () => ({
+    components: { Page130 },
+    template: `<Page130 />`
   })
 )
