@@ -4,8 +4,9 @@
       <h1 class="title">ウォッチャを学ぶ</h1>
       <h2 class="subtitle">ウォッチャでデータを監視して処理を自動化する</h2>
       <div class="study">
-        <h3 class="study_title">実行頻度の制御</h3>
+        <h3 class="study_title">複数の値を監視する</h3>
         <div><input v-model.number="list[0].price">{{list[0].price}}</div>
+        <div><input v-model.number="sample">{{sample}}</div>
       </div>
       <div class="data">{{$data}}</div>
     </div>
@@ -104,15 +105,28 @@ export default {
       ]
     }
   },
+  created(){
+    this.$watch(function(){
+      return [this.list, this.sample]
+    },
+    function(){
+      alert('アラートだよ')
+    },
+    {
+      immediate: true,
+      deep: true
+    })
+  },
+  computed: {
+    watchTarget: function(){
+      return [this.list, this.sample]
+    }
+  },
   watch: {
-    list: {
-      handler: _.debounce(function(newVal){//debaunceはLodashのメソッド：実行から指定ミリ秒が過ぎた場合にコールバックを呼び出す
-        //コストの高い処理を書く
-        console.log(newVal);
+    watchTarget: {
+      handler: function(){
+        alert('watchTarget')
       },
-        //valueの変化が終わるのを待つ時間をミリ秒で指定
-        1000
-      ),
       deep: true,
       immediate: true
     }
