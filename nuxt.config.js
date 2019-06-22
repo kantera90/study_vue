@@ -33,6 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/myFilter.js',
+    '~plugins/focus.js'
   ],
 
   /*
