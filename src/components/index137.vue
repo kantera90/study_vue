@@ -96,7 +96,7 @@
 
 <script>
 import _ from 'lodash';
-
+import { focus } from '../../plugins/focus.js'
 
 export default {
   data() {

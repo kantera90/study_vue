@@ -8,7 +8,7 @@
         <b>ローカルへの登録</b>
         <p>{{ price | localeNum }}円</p>
         <b>グローバルへの登録</b>
-        <p>{{ price | localeNumGlobal }}円</p>
+        <p>{{ price | gfilter }}円</p>
       </div>
       <div class="data">{{$data}}</div>
     </div>
@@ -93,7 +93,7 @@
 <script>
 import _ from 'lodash';
 const axios = require('axios');
-
+import { gfilter } from '../../plugins/myfilter.js'
 
 export default {
   data() {

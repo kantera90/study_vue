@@ -34,7 +34,7 @@ export default {
   */
   plugins: [
     '~/plugins/myFilter.js',
-    '~plugins/focus.js'
+    '~/plugins/focus.js'
   ],
 
   /*
