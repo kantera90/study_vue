@@ -16,6 +16,7 @@ import Page135 from '../components/index135.vue'
 import Page136 from '../components/index136.vue'
 import Page137 from '../components/index137.vue'
 import Page139 from '../components/index139.vue'
+import Page140 from '../components/index140.vue'
 
 storiesOf('page', module)
 .add('120', () => ({
@@ -95,5 +96,10 @@ storiesOf('page', module)
 ).add('139', () => ({
   components: { Page139 },
   template: `<Page139 />`
+})
+)
+.add('140', () => ({
+  components: { Page140 },
+  template: `<Page140 />`
 })
 )

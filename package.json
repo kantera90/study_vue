@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "storybook": "start-storybook -p 9001"
+    "storybook": "start-storybook -s ./static -p 9001"
   },
   "dependencies": {
     "@storybook/addon-actions": "^5.1.3",
